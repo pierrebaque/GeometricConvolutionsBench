@@ -164,7 +164,7 @@ with tf.Session(config=config) as sess:
     
     fetched_timeline = timeline.Timeline(run_metadata.step_stats)
     chrome_trace = fetched_timeline.generate_chrome_trace_format()
-    with open('timeline_sparse.json', 'w') as f:
+    with open('timeline_graph_laplacian.json', 'w') as f:
         f.write(chrome_trace)
     
 #plt.imshow(Y5_out[0,:,0].reshape((Sz,Sz)),interpolation = 'nearest')
