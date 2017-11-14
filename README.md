@@ -28,13 +28,16 @@ The 4 scripts that we provide correspond to the following setting:
 Average Time 0.00098s. It runs on the GPU.
 
 ### *BenchmarkGraphLaplacianConvolutionSparse* of [gcn]:
-Average Time 0.00889. TensorFlow takes advantage of the *pre-computed* Sparse Laplacian Matrix to perform very efficient GPU operations.
+Average Time 0.00889. TensorFlow takes advantage of the *pre-computed* Sparse Laplacian Matrix to perform very efficient GPU operations. However, this model has a limited expressivity as the convolutions are performed by a for of "averaging" of the neighbouring features using Laplacian matrices.
+
+### *BenchmarkGeometricConvolutionDense* of [MoNet]:
+Average Time 0.27200. It corresponds to the dense version as implemented in the public code of [MoNet]. 
+TensorFlow uses GPU computation with dense adjacency matrices. The main drawback is the memory requirements which limit the graph size and the number of features.
 
 ### *BenchmarkGeometricConvolutionSparse* of [MoNet]:
 Average Time 1.67996. TensorFlow cannot use the GPU to perform some sparse matrix operations which related to the construction of the sparse geometric weight matrix used
 in Geometric Convolutions.
 
-### *BenchmarkGeometricConvolutionDense* of [MoNet]:
-Average Time 0.27200. It corresponds to the dense version implemented in the public code of [^fn2]. 
-TensorFlow uses GPU computation with dense adjacency matrices. The main drawback is the memory requirements which limit the graph size and the number of features.
+The efficiency and speed achieved by sparse matrix multiplications in [gcn], calls for a Sparse GPU implementation of the Geometric Convolutions [MoNet].
+
 
