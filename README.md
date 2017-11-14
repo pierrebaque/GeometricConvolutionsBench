@@ -18,9 +18,9 @@ To run the code, use:
 python BenchmarkStandardConvolution 1 50 50
 where the paramters correspond to Batch Size, grid size (one side of the square), number of features.
 
-nb: You may have to use   
+*nb:* You may have to use   
 export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH   
-to be able to call the timeline library which is used for TensorFlow code profiling.   
+to be able to call the *timeline* library which is used for TensorFlow code profiling.   
 
 We use Nvidia Pascal Titan X GPU for all GPU computations.
 
