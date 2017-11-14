@@ -1,4 +1,4 @@
-# GeometricConvolutionsBench in TensorFlow
+# Graph Convolution Benchmark in TensorFlow
 
 In particular, our goal was to compare the efficiency of so-called Geometric Convolutions, 
 which can be defined on an *arbitrary mesh structure*, to standard convolutions, which assume a that the nodes are organised along an 
