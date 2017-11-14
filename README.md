@@ -8,7 +8,7 @@ These scripts propose several implementations of geometric convolution methods t
 They are inspired from original paper and codes of [gcn] and [MoNet].   
 
 
-[gcn] : Thomas N. Kipf, Max Welling, Semi-Supervised Classification with Graph Convolutional Networks (ICLR 2017)
+[gcn] : Thomas N. Kipf, Max Welling, Semi-Supervised Classification with Graph Convolutional Networks, ICLR 2017
 [Monet] : F. Monti*, D. Boscaini*, J. Masci, E. Rodolà, J. Svoboda, M. M. Bronstein, Geometric deep learning on graphs and manifolds using mixture model CNNs, CVPR 2017 (MoNet framework)
 
 In each scenario, we assume that we are doing convolutions over a graph which is organised as a grid where each node has 8 neighbours. 
