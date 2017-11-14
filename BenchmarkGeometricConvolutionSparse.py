@@ -187,7 +187,7 @@ with tf.Session(config=config) as sess:
         print 'Time to compute iter %d : %.05f'%(i,(t1-t0))
         times.append(t1-t0)
         
-    print 'Average Time %.05f'%np.mean(times)    
+    print 'Average Time %.05f'%np.mean(times[3:])    
     Y5_out = sess.run([Y5],options=options, run_metadata=run_metadata)[0]
     
     fetched_timeline = timeline.Timeline(run_metadata.step_stats)
