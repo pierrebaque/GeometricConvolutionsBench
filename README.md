@@ -26,17 +26,17 @@ We use Nvidia Pascal Titan X GPU for all GPU computations.
 
 The 4 scripts that we provide correspond to the following setting:   
 ### *BenchmarkStandardConvolution:* Standard convolutional Neural net
-Average Time 0.00098s. It runs on the GPU.
+Average Time 0.00098 s. It runs on the GPU.
 
 ### *BenchmarkGraphLaplacianConvolutionSparse* of [gcn]:   
-Average Time 0.00889. TensorFlow takes advantage of the *pre-computed* Sparse Laplacian Matrix to perform very efficient GPU operations. However, this model has a limited expressivity as the convolutions are performed by a for of "averaging" of the neighbouring features using Laplacian matrices.
+Average Time 0.00889 s. TensorFlow takes advantage of the *pre-computed* Sparse Laplacian Matrix to perform very efficient GPU operations. However, this model has a limited expressivity as the convolutions are performed by a for of "averaging" of the neighbouring features using Laplacian matrices.
 
 ### *BenchmarkGeometricConvolutionDense* of [MoNet]:   
-Average Time 0.27200. It corresponds to the dense version as implemented in the public code of [MoNet]. 
+Average Time 0.27200 s. It corresponds to the dense version as implemented in the public code of [MoNet]. 
 TensorFlow uses GPU computation with dense adjacency matrices. The main drawback is the memory requirements which limit the graph size and the number of features.
 
 ### *BenchmarkGeometricConvolutionSparse* of [MoNet]:   
-Average Time 1.67996. TensorFlow cannot use the GPU to perform some sparse matrix operations which related to the construction of the sparse geometric weight matrix used
+Average Time 1.67996 s. TensorFlow cannot use the GPU to perform some sparse matrix operations which related to the construction of the sparse geometric weight matrix used
 in Geometric Convolutions.
 
 The efficiency and speed achieved by sparse matrix multiplications in [gcn], calls for a Sparse GPU implementation of the Geometric Convolutions [MoNet].
