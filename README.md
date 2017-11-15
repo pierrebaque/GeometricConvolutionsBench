@@ -12,7 +12,7 @@ They are inspired from original paper and codes of [gcn] and [MoNet].
 In each scenario, we assume that we are doing convolutions over a graph which is organised as a grid where each node has 8 neighbours. 
 Convolutions are done in a CNN setting with same number of input and output features.
 
-# Usage
+## Usage
 To run the code, use:   
 python BenchmarkStandardConvolution 1 50 50
 where the paramters correspond to Batch Size, grid size (one side of the square), number of features.
