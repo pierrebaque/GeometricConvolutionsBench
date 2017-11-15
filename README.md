@@ -29,7 +29,7 @@ We use Nvidia Pascal Titan X GPU for all GPU computations. The code was written 
 
 The 4 scripts that we provide correspond to the following setting:   
 #### *BenchmarkStandardConvolution:* Standard convolutional Neural net
-Average Time 0.00098 s. It runs on the GPU.
+Average Time 0.00098 s. It runs on the GPU such a speed is possible thanks to the regular grid organisation.
 
 #### *BenchmarkGraphLaplacianConvolutionSparse* of [gcn]:   
 Average Time 0.00889 s. TensorFlow takes advantage of the *pre-computed* Sparse Laplacian Matrix to perform very efficient GPU operations. However, this model has a limited expressivity as the convolutions are performed by a for of "averaging" of the neighbouring features using Laplacian matrices.
